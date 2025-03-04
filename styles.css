@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root{
+--DarkBlue: hsl(240, 38%, 20%);
+--GrayishBlue: hsl(240, 18%, 77%);
+font-family: "Inter", sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid var(--DarkBlue); */
+    margin: 0px 0px;
+    height: 100vh;
+    padding: 0px 0px;
+/* overflow: hidden; */
+    background-image: url(images/pattern-bg.svg), url(images/pattern-curve.svg);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: right 100px top, left  bottom;
+    
+}
+
+.contents{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 2px solid var(--DarkBlue); */
+    width: 1100px;
+    height: 500px;
+    position: absolute;
+   
+
+}
+
+.quotes{
+    width: 790px;
+    height: fit-content;
+    /* border: 1px solid blue; */
+    z-index: 1;
+    background-image: url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: left 100px top;
+    
+    /* position: absolute; */
+    /* float: right; */
+
+}
+
+.nameJob{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 10px;
+}
+
+#quote{
+    font-size: 32px;
+    font-weight: normal;
+  
+}
+
+p{
+    font-size: 25px;
+}
+
+#job{
+    color: var(--GrayishBlue);
+}
+
+.imageSlider{
+    width: 400px;
+    height: 500px;
+    /* border: 1px solid red; */
+    margin: 0px 0px;
+    padding: 0px 0px;
+   
+    /* float: right; */
+    /* margin-left: 400px; */
+
+    position:absolute;
+    right: 0px;
+    /* top: 0px; */
+    /* z-index: 0; */
+}
+
+.image{
+    width: 400px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
+    /* first: left, second: bottom, third: blur, fourth: spread*/
+    border-radius: 5px;
+    /* position: absolute; */
+    /* right: 0px; */
+
+}
+
+.slider{
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    padding: 5px 10px;
+    position: absolute;
+    /* right: 0px; */
+    bottom: 0px;
+    left: 30px;
+    top: 380px;
+    right: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+}
+
+
+@media screen and (max-width: 375px) {
+
+    body{
+        display: grid;
+        
+        /* grid-row: 2; */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* border: 2px solid var(--DarkBlue); */
+        margin: 30px 0px;
+        height: 100vh; 
+        padding: 0px 0px;
+        overflow-y: scroll;
+        /* gap: 20px; */
+        background-image:  url(images/pattern-curve.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: left 0px bottom;
+        /* background-image: none; */
+        
+    }
+
+.contents{
+    display: grid; 
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    /* top: 0px; */
+    text-align: center;
+    /* border: 2px solid var(--DarkBlue); */
+    /* width: 370px; */
+
+}
+.quotes{
+    grid-row: 2/3;
+    width: 90%;
+    margin: 0px 20px;
+    height: fit-content;
+    /* border: 1px solid blue; */
+    background-image: url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: left 100px top;
+    
+}
+
+
+.nameJob{
+    display: grid;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+#quote{
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+p{
+    font-size: 15px;
+}
+
+#job{
+    color: var(--GrayishBlue);
+}
+
+.imageSlider{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    /* height: fit-content; */
+    /* border: 1px solid red; */
+    margin: 0px 0px;
+    padding: 0px;
+
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    /* float: right; */
+    /* margin-left: 400px; */
+    /* right: none; */
+
+    /* top: 0px; */
+    /* z-index: 0; */
+    background-image: url(images/pattern-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.image{
+    width: 200px;
+    /* height: fit-content; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
+    /* first: left, second: bottom, third: blur, fourth: spread*/
+    border-radius: 5px;
+    /* position: absolute; */
+    /* right: 0px; */
+
+}
+
+.slider{
+    background-color: white;
+    /* width: 60px; */
+    /* height: 30px; */
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    /* padding: 5px 10px; */
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
+    transform: translate(0, -50%);
+    /* right: 0px; */
+    /* bottom: 0px;
+    left: 30px;
+    top: 380px;
+    right: 0px; */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+}
+
+p{
+    margin: 0px 0px;
+}
+
+
+    
+    
+}
